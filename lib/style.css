@@ -1,0 +1,144 @@
+html, body { 
+	margin: 0; padding: 0; 
+}
+*{ 
+	box-sizing: border-box; 
+}
+.slider{ 
+	width: 70%;
+	margin: 100px auto 0;
+}
+.slick-slide { 
+	margin: 0px 20px;
+	height: 25% !important; 
+}
+.slick-slide img { 
+	width: 100%; 
+}
+.slick-prev:before, .slick-next:before {
+	color: #fff;
+}
+.img-responsive{
+	height:90%;
+	padding: 0 0 5px 0;
+}
+.slick-prev, .slick-next {
+	width: 24px !important;
+	height: 24px !important;
+	padding: 2.5px 0 0 0 !important;
+	border-radius: 2px;
+	background: #ccc !important; 
+}
+.fb-username {
+	position: absolute;
+	margin: -34px 0 0 225px; 
+}
+span.fb-user {
+    font-size: 21px;
+    color: #756c6c;
+}
+.slick-list{
+	border: 1px #ccc solid;
+	padding: 16px 0 26px 0 !important;
+}
+.prev{
+	color:#fff!important;background-color:#000!important;
+	position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%);
+	border:none;display:inline-block;outline:0;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+}
+.prev:hover{color:#000!important;background-color:#ccc!important}
+.next:hover{color:#000!important;background-color:#ccc!important}
+.next {
+    position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%);
+	color:#fff!important;background-color:#000!important;
+	border:none;display:inline-block;outline:0;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+}
+span.fb-album-name {
+    color: #756c6c;
+}
+img.album-img-responsive{
+	width: 18%;
+}
+div#loading{
+    display: none;
+    z-index: 100499;
+    opacity: 0.5;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    width: 1366px;
+    padding: 0px;
+    border: none;
+    text-align: center;
+    height: 100%;
+}
+div#loading1{
+    z-index: 100499;
+    opacity: 0.5;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    width: 1366px;
+    padding: 0px;
+    border: none;
+    text-align: center;
+    height: 100%;
+}
+img#loading-image {
+    width: 4%;
+    padding: 14% 0 0 0;
+    z-index: 9999;
+}
+.fancybox-nav span {
+    visibility: visible;
+}
+input.download-checkbox {
+    /* float: right; */
+    margin: 2px 0 0 28px;
+}
+.data-transfer {
+    width: 70%;
+    margin: 0 auto;
+	display: flex;
+}
+.google-signin-btn {
+    width: 140px;
+    position: absolute;
+    margin: -45px 0 0 1021px;
+}
+.moveToDrive{
+	/* display:none; */
+	cursor: pointer;
+}
+.infotouser{
+	clear:both;
+	padding: 16px 0;
+}
+#infotouser:hover ~ #google-signin-btn{
+	background: #ccc;
+}
+.user-info-gsignin{
+	color:#272222;
+	font-size:18px;	
+}
+img.upload-icon {
+	float: right;
+    width: 21px !important;
+    margin: -23px 17px 0 0;
+	cursor: pointer;
+}
+img.download-icon {
+	width: 23px !important;
+    margin: -18px 0 0 1px;
+	cursor: pointer;
+}
+input.upload-checkbox {
+    float: right;
+    margin: -17px 0 0 0;
+}
+.data-trnfr-padding{
+	padding: 0 0 0 4%;
+}
+.data-trnf-btn{
+	width:210px;
+}

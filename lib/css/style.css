@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+html {
+position: relative;
+min-height: 100%;
+}
+body {
+margin: 0 0 100px; /* bottom = footer height */
+}
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+div.header{
+	position: fixed;
+	width: 100%;
+	height:220px;
+	padding: 2px;
+	margin: 2px;
+	background: #FFFFFF;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);	
+}
+div.mar{
+	margin-top:205px;
+}
+div.footer {
+	text-align:center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 75px;
+	width: 100%;
+	background: #FFFFFF;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);	
+}
+div.gallery {
+	background: #FFFFFF;
+    margin: 5px 0 0 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 290px;
+	padding:15px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	text-align:center;
+}
+.myButton1 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #8ECD36;
+  width: 250px;
+  border: 0;
+  padding: 15px;
+  color: #000000;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin:6px
+}
+.myButton1:hover,.myButton1:active,.myButton1:focus {
+  background: #43A047;
+}
+.myButton {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin:6px
+}
+.myButton:hover,.myButton:active,.myButton:focus {
+  background: #43A047;
+}
+p.msg {
+    white-space: nowrap; 
+    overflow: hidden; 
+	font-family:bold;
+}
+p.msg:hover {
+    text-overflow: inherit;
+    overflow: visible;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 150px;
+    height: 150px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+a {color:#76b852;}      
+a:visited {color:#76b852;}
+a:hover {color:#43A047;}
+a:active {color:#43A047;} 
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+@media only screen and (max-width: 480px) {
+	   .responsive {
+			width: 100%;
+		}
+		div.header{
+			height:380px;
+		}
+		div.mar{
+			margin-top:380px;
+		}
+}
+@media only screen and (min-width: 500px) and (max-width: 700px){
+	   .responsive {
+			width: 50%;
+		}
+		div.header{
+			height:280px;
+		}
+		div.mar{
+			margin-top:280px;
+		}
+}   
+@media only screen and (max-device-width: 480px) {
+		.responsive {
+			width: 33%;
+		}
+		div.header{
+			height:280px;
+		}
+		div.mar{
+			margin-top:280px;
+		}
+}  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}

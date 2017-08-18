@@ -1,20 +1,19 @@
+<?php include "slide_js.js";?>
 <!DOCTYPE html>
 <html>
-<title>Slide Show</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link rel="stylesheet" href="lib/style.css">
-<body>
-<h2 class="w3-center">
-<?php 
-try{
-ini_set('max_execution_time', 600);
-include 'basic.php';
-?>
-<p class="text-info"><?php echo "Welcome,".$user_name;?></p>
-<div class="w3-content w3-display-container">
+<link rel="stylesheet" href="lib/slide.css">
+<body onload="myFunction()">
+<h2 style="text-align:center">SLIDESHOW</h2>
+</div>
+  <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 <?php
-if(isset($_GET["album_id"])){
+try{
+	ini_set('max_execution_time', 600);
+	include 'basic.php';
+	if(isset($_GET["album_id"])){
 
 	$id=$_GET["album_id"];
 	$photos=$fb->get("/{$id}/photos",$accessToken);
@@ -32,7 +31,25 @@ if(isset($_GET["album_id"])){
 
 	for($i=0;$i<count($name);$i++) {
 ?>
-	<img class="mySlides" src=<?php echo $image[$i]?> style="width:100%" class="img-responsive">
+		 <div class="mySlides">
+				<div class="numbertext"><?php echo $i+1;?> / <?php echo count($name);?></div>
+				<img src="<?php echo $image[$i]?>" style="width:410px;height:410px;">
+		</div>
+		
+<?php
+	}
+?>	
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="caption-container">
+      <p id="caption"></p>
+</div>
+ </div>
+<?php
+
+	for($i=0;$i<count($name);$i++) {
+	
+?><img class="demo cursor" src="<?php echo $image[$i]?>" style="width:50px;height:50px" onclick="currentSlide(<?php echo $i+1;?>)" alt="<?php echo $name[$i]==""?"Photo":$name[$i];?>">	 
 <?php
 	}
 }else{
@@ -42,39 +59,8 @@ if(isset($_GET["album_id"])){
 	header("location:fb-callback.php");
 }
 ?>
-<button class="prev" onclick="plusDivs(-1)">&#10094;</button>
-<button class="next" onclick="plusDivs(1)">&#10095;</button>
+ </div>
 </div>
-<script>
-//This script is used to display slideshow.
-var myIndex = 0;
-carousel();
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000); // Change image every 2 seconds
-}
-var slideIndex = 1;
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
-    }
-    x[slideIndex-1].style.display = "block"; 
-}
-</script>
+</div>
 </body>
 </html>

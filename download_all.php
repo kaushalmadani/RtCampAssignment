@@ -14,10 +14,10 @@ $albumName = explode(',',$album_names);
 $k=0;
 
 foreach($albumIds as $album_id){
-
 	$dir="image/".$user_id."/".$albumName[$k];
-	//if(!file_exists($dir)){
+	if(!file_exists($dir)){
 		mkdir($dir, 0777, true);
+	}
 		$photos=$fb->get("/{$album_id}/photos",$accessToken);
 		$json=$photos->getGraphEdge();
 		$name=array();
@@ -40,13 +40,14 @@ foreach($albumIds as $album_id){
 if(count($albumName)==1){
 		Zip("image/".$user_id."/".$albumName[0],"image/".$user_id."/".$albumName[0].".zip");
 		$full="image/".$user_id."/".$albumName[0].".zip";
+		echo "<br><a href='$full' class='msg' style='color:red;text-align:center'>Download your album:".$albumName[0]."</a>";
 }else{
 	foreach($albumName as $nm){
 		Zip("image/".$user_id."/".$nm,"image/".$user_id."/selected.zip");
 	}
 	$full="image/".$user_id."/"."selected.zip";
+	echo "<br><a href='$full' class='msg' style='color:red;text-align:center'>Download all your albums</a>";
 }
-echo "<br><a href='$full'>Download all your albums</a>";
 }catch(Exception $e){
 echo "<br>Please try again!!";
 }

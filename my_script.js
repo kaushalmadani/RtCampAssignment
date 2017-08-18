@@ -1,6 +1,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
+	function upload_one(val){
+		window.location.assign(val);
+	}
 	function download_one(id,id1){
 			toggleLoading(true);
 			jQuery.noConflict();
@@ -51,7 +54,7 @@
 				},
 				error: function(error){
 					toggleLoading(false);
-					console.log("Something went wrong...");
+					console.log("Something went wrong..."+error);
 					window.location.assign('fb-callback.php?done=0');
 				}
 			});
@@ -82,7 +85,7 @@
 				error: function(error){
 					toggleLoading(false);
 					window.location.assign('fb-callback.php?done=0');
-					console.log("Something went wrong...");
+					console.log("Something went wrong..."+error);
 				}
 			});
 		}else{
